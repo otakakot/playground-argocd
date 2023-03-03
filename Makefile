@@ -5,3 +5,11 @@ web: ## make login port=9090
 .PHONY: argocd
 argocd:
 	@./script/create-argocd.sh
+
+.PHONY: kind
+kind:
+	@kind create cluster
+
+.PHONY: destroy
+destroy:
+	@kind delete cluster

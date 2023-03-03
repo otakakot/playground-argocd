@@ -1,7 +1,5 @@
 #!/bin/bash -eu
 
-export PORT=${1:-9090}
-
 declare context="kind-kind"
 
 kubectl --context ${context} create namespace argocd
