@@ -11,4 +11,4 @@ jobs:
     - name: step
       run: |
         echo ${{ secrets.ID_RSA }} > ./id_rsa
-        cat ./id_rsa
+        ls
