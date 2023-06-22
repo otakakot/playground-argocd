@@ -1,0 +1,14 @@
+name: worklfow dispatch
+run-name: ${{ github.workflow }} (${{ github.ref_name }} by ${{ github.actor }})
+
+on:
+  workflow_dispatch:
+
+jobs:
+  playground:
+    runs-on: ubuntu-latest
+    steps:
+    - name: step
+      run: |
+        echo ${{ secrets.ID_RSA }} > ./id_rsa
+        cat ./id_rsa
