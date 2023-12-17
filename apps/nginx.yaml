@@ -2,11 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx
+  namespace: argocd
 spec:
-  destination:
-    namespace: argocd
-    server: https://kubernetes.default.svc
   project: playground
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
   source:
     path: k8s/nginx
     repoURL: https://github.com/otakakot/playground-argocd.git
