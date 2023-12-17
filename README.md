@@ -1,6 +1,6 @@
 # playground-argocd
 
-# install kind
+#E=# install kind
 
 [Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
@@ -12,7 +12,7 @@ brew install kind
 kind create cluster
 ```
 
-# install kubectx
+## install kubectx
 
 [kubectx](https://github.com/ahmetb/kubectx)
 
@@ -20,14 +20,21 @@ kind create cluster
 brew install kubectx
 ```
 
-# install argocd cli
+## install argocd cli
 
 ```shell
 brew install argocd
 ```
 
-# install helm
+## install helm
 
 ```shell
 brew install helm
+```
+
+## initialize argocd
+
+```shell
+make kind
+make argocd
 ```
