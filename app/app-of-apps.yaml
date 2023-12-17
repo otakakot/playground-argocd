@@ -6,7 +6,7 @@ metadata:
   labels:
     environment: playground
 spec:
-  project: playground
+  project: app
   source:
     path: apps
     repoURL: https://github.com/otakakot/playground-argocd.git
