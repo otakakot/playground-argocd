@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx
+spec:
+  destination:
+    namespace: defalut
+    server: https://kubernetes.default.svc
+  project: playground
+  source:
+    path: k8s/nginx
+    repoURL: https://github.com/otakakot/playground-argocd.git
+    targetRevision: main
+  syncPolicy:
+    automated: {}

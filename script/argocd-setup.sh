@@ -33,7 +33,7 @@ argocd proj allow-cluster-resource ${PROJ} '*' '*'
 echo "allowed cluster resource"
 
 # https://argo-cd.readthedocs.io/en/stable/user-guide/commands/argocd_proj_add-source/
-argocd proj add-source ${PROJ} ${REPO_URL}
+argocd proj add-source ${PROJ} '*'
 echo "added source ${REPO_URL}"
 
 kill ${PID}

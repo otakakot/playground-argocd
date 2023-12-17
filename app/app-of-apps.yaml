@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+  labels:
+    environment: playground
+spec:
+  project: playground
+  source:
+    path: apps
+    repoURL: https://github.com/otakakot/playground-argocd.git
+    targetRevision: main
+  syncPolicy:
+    automated: {}
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
