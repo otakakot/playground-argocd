@@ -4,7 +4,7 @@ metadata:
   name: httpd
 spec:
   destination:
-    namespace: defalut
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: playground
   source:
