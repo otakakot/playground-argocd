@@ -1,10 +1,10 @@
-.PHONY: web
-web: ## make login port=9090
-	@./script/web-argocd.sh ${port}
+.PHONY: login
+login: ## make login port=9090
+	@./script/argocd-login.sh ${port}
 
 .PHONY: argocd
 argocd:
-	@./script/create-argocd.sh
+	@./script/argocd-setup.sh
 
 .PHONY: kind
 kind:
