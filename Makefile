@@ -9,9 +9,9 @@ kind: ## make kind
 .PHONY: argocd
 argocd: ## make argocd
 	@./script/argocd-install.sh
-	@sleep 30
+	@sleep 60
 	@./script/argocd-setup.sh
-	@sleep 30
+	@sleep 60
 	@./script/argocd-apply.sh
 
 .PHONY: login

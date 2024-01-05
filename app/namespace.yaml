@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,7 +7,7 @@ metadata:
   labels:
     environment: playground
 spec:
-  project: app
+  project: default
   source:
     path: k8s/namespace
     repoURL: https://github.com/otakakot/playground-argocd.git

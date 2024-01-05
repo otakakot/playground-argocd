@@ -1,12 +1,13 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: argo-workflows
-  namespace: argo
+  namespace: argocd
   labels:
     environment: playground
 spec:
-  project: app
+  project: default
   source:
     path: charts/argo-workflows
     repoURL: https://github.com/argoproj/argo-helm.git
