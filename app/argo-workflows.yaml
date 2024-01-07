@@ -5,15 +5,28 @@ metadata:
   name: argo-workflows
   namespace: argocd
   labels:
-    environment: playground
+    environment: sample
 spec:
   project: default
   source:
     path: charts/argo-workflows
     repoURL: https://github.com/argoproj/argo-helm.git
-    targetRevision: argo-workflows-0.40.3
+    targetRevision: argo-workflows-0.40.4
+    helm:
+      valuesObject:
+        workflow:
+          serviceAccount:
+            create: true
+            name: argo-workflow
+          rbac:
+            create: true
+          controller:
+            workflowNamespaces:
+            - default
   syncPolicy:
     automated: {}
+    syncOptions:
+    - CreateNamespace=true
   destination:
     namespace: argo
     server: https://kubernetes.default.svc
