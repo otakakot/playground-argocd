@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mailhog
+  namespace: argocd
+  labels:
+    environment: playground
+spec:
+  project: app
+  source:
+    path: charts/mailhog
+    repoURL: https://github.com/codecentric/helm-charts.git
+    targetRevision: mailhog-5.2.3
+  syncPolicy:
+    automated: {}
+  destination:
+    namespace: develop
+    server: https://kubernetes.default.svc
