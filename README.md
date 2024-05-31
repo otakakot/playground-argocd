@@ -1,6 +1,6 @@
 # playground-argocd
 
-#E=# install kind
+## install kind
 
 [Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
