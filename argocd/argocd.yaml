@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/argoproj/argo-cd.git
-    targetRevision: stable
+    targetRevision: v2.10.0
     path: manifests
     directory:
       include: install.yaml
