@@ -38,3 +38,9 @@ brew install helm
 make kind
 make argocd
 ```
+
+## trivy scan
+
+```shell
+trivy config k8s/nginx/deployment.yaml
+```
